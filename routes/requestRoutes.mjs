@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
 
 //Read (one offer)
 router.get('/:id', async (req, res) => {
-    const oneRequest = await Offer.findById(req.params.id);
+    const oneRequest = await Request.findById(req.params.id);
     res.json(oneRequest);
 });
 
