@@ -32,7 +32,7 @@ router.put('/:id', async (req, res) => {
 
 //Delete 
 router.delete('/:id', async (req, res) => {
-    const deleteRequest = await Offer.findByIdAndDelete(req.params.id);
+    const deleteRequest = await Request.findByIdAndDelete(req.params.id);
     if (!deleteRequest) {
         res.status(400).json('Request not found.')
     };
