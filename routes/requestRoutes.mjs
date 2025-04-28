@@ -23,7 +23,7 @@ router.get('/:id', async (req, res) => {
 
 //Update
 router.put('/:id', async (req, res) => {
-    const editRequest = await Offer.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    const editRequest = await Request.findByIdAndUpdate(req.params.id, req.body, { new: true });
     if (!editRequest) {
         res.status(400).json({ msg: `Request not found.` })
     };

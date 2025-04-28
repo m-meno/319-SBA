@@ -27,4 +27,4 @@ const allOffers = [
 
 ];
 
-export default {allOffers};
+export default { allOffers };
