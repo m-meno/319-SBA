@@ -15,3 +15,5 @@ const offerSchema = new mongoose.Schema({
         required: true
     }
 });
+
+export default mongoose.model("Offer", offerSchema);

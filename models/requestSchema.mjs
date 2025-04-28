@@ -14,4 +14,6 @@ const requestSchema = new mongoose.Schema({
         type: String,
         required: true
     }
-})
+});
+
+export default mongoose.model("Request", requestSchema);
