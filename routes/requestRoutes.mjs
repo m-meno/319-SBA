@@ -15,11 +15,17 @@ router.get('/', async (req, res) => {
     res.json(allRequests);
 });
 
+//Read (one offer)
+router.get('/:id', async (req, res) => {
+    const oneRequest = await Offer.findById(req.params.id);
+    res.json(oneRequest);
+});
+
 //Update
 router.put('/:id', async (req, res) => {
     const editRequest = await Offer.findByIdAndUpdate(req.params.id, req.body, { new: true });
     if (!editRequest) {
-        res.status(400).json({ msg: `Offer not found.` })
+        res.status(400).json({ msg: `Request not found.` })
     };
     res.json(editRequest);
 });
@@ -28,10 +34,9 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
     const deleteRequest = await Offer.findByIdAndDelete(req.params.id);
     if (!deleteRequest) {
-        res.status(400).json('Offer not found.')
+        res.status(400).json('Request not found.')
     };
+    res.json(deleteRequest);
 });
-
-
 
 export default router;

@@ -25,4 +25,6 @@ const allOffers = [
         location: "Uptown"
     },
 
-]
+];
+
+export default {allOffers};

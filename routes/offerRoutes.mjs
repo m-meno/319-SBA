@@ -9,10 +9,16 @@ router.post('/', async (req, res) => {
     res.json(newOffer);
 });
 
-//Read
+//Read (all offers)
 router.get('/', async (req, res) => {
     const allOffers = await Offer.find({});
     res.json(allOffers);
+});
+
+//Read (one offer)
+router.get('/:id', async (req, res) => {
+    const oneOffer = await Offer.findById(req.params.id);
+    res.json(oneOffer);
 });
 
 //Update
@@ -30,6 +36,7 @@ router.delete('/:id', async (req, res) => {
     if (!deleteOffer) {
         res.status(400).json('Offer not found.')
     };
+    res.json(deleteOffer);
 });
 
 

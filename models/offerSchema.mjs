@@ -4,7 +4,8 @@ const offerSchema = new mongoose.Schema({
     type: {
         type: String,
         required: true,
-        enum: ["Service", "Product"]
+        enum: ["Service", "Product"],
+        message: "{VALUE} is not a valid offer type."
     },
     description: {
         type: String,
@@ -13,7 +14,8 @@ const offerSchema = new mongoose.Schema({
     location: {
         type: String,
         required: true,
-        enum: ["LoDo", "Capital Hill", "Uptown", "Golden Triangle", "Five Points"]
+        enum: ["LoDo", "Capital Hill", "Uptown", "Golden Triangle", "Five Points"],
+        message: "{VALUE} is not a valid city."
     }
 });
 

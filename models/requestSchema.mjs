@@ -4,7 +4,8 @@ const requestSchema = new mongoose.Schema({
     type: {
         type: String,
         required: true,
-        enum: ["Product", "Service"]
+        enum: ["Product", "Service"],
+        message: "{VALUE} is not a valid request type."
     },
     description: {
         type: String,
@@ -13,8 +14,9 @@ const requestSchema = new mongoose.Schema({
     location: {
         type: String,
         required: true,
-        enum: ["LoDo", "Capital Hill", "Uptown", "Golden Triangle", "Five Points"]
-    },
+        enum: ["LoDo", "Capital Hill", "Uptown", "Golden Triangle", "Five Points"],
+        message: "{VALUE} is not a valid city."
+    }
 
 });
 
