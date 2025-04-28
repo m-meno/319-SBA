@@ -2,6 +2,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './db/conn.mjs';
+import offerRoutes from './routes/offerRoutes.mjs'
 
 
 //Setups
@@ -14,6 +15,7 @@ app.use(express.json());
 connectDB();
 
 //Routes
+app.use('/offers', offerRoutes);
 
 //Error Handling Middleware
 
