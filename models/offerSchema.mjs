@@ -4,7 +4,7 @@ const offerSchema = new mongoose.Schema({
     type: {
         type: String,
         required: true,
-        enum: ["Service", "Produce"]
+        enum: ["Service", "Product"]
     },
     description: {
         type: String,
@@ -12,7 +12,8 @@ const offerSchema = new mongoose.Schema({
     },
     location: {
         type: String,
-        required: true
+        required: true,
+        enum: ["LoDo", "Capital Hill", "Uptown", "Golden Triangle", "Five Points"]
     }
 });
 

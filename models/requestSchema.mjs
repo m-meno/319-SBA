@@ -4,7 +4,7 @@ const requestSchema = new mongoose.Schema({
     type: {
         type: String,
         required: true,
-        enum: ['Product', 'Service']
+        enum: ["Product", "Service"]
     },
     description: {
         type: String,
@@ -12,8 +12,10 @@ const requestSchema = new mongoose.Schema({
     },
     location: {
         type: String,
-        required: true
-    }
+        required: true,
+        enum: ["LoDo", "Capital Hill", "Uptown", "Golden Triangle", "Five Points"]
+    },
+
 });
 
 export default mongoose.model("Request", requestSchema);
