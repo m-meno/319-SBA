@@ -2,7 +2,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './db/conn.mjs';
-import offerRoutes from './routes/offerRoutes.mjs'
+import offerRoutes from './routes/offerRoutes.mjs';
+import { globalError } from './middleware/globalErrorHandling.mjs';
 
 
 //Setups
@@ -18,6 +19,7 @@ connectDB();
 app.use('/offers', offerRoutes);
 
 //Error Handling Middleware
+app.use(globalError);
 
 //Listener
 app.listen(PORT, ()=> {
