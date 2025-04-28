@@ -16,7 +16,14 @@ const offerSchema = new mongoose.Schema({
         required: true,
         enum: ["LoDo", "Capital Hill", "Uptown", "Golden Triangle", "Five Points"],
         message: "{VALUE} is not a valid city."
+    },
+    datePosted: {
+        type: Date,
+        required: true,
+        default: Date.now
     }
 });
+
+offerSchema.index({datePosted: 1});
 
 export default mongoose.model("Offer", offerSchema);

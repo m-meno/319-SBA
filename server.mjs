@@ -7,6 +7,8 @@ import requestRoutes from './routes/requestRoutes.mjs';
 import { globalError } from './middleware/globalErrorHandling.mjs';
 import Offer from './models/offerSchema.mjs';
 import allOffers from './utilities/offerData.mjs';
+import Request from './models/requestSchema.mjs';
+import allRequests from './utilities/requestData.mjs';
 
 
 //Setups
@@ -25,6 +27,8 @@ app.use('/requests', requestRoutes);
 // app.get('/seed', async (req, res)=> {
 //     await Offer.deleteMany({});
 //     await Offer.create(allOffers);
+//     await Request.deleteMany({});
+//     await Request.create(allOffers); 
 //     res.send('Database seeded.')
 // });
 
