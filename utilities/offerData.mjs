@@ -6,7 +6,7 @@ const allOffers = [
     },
     {
         type: "Service",
-        desciption: "Lawn mowing and gardening assistance",
+        description: "Lawn mowing and gardening assistance",
         location: "Uptown"
     },
     {
@@ -23,8 +23,8 @@ const allOffers = [
         type: "Product",
         description: "I have tons of compost - stop by to grab some!",
         location: "Uptown"
-    },
+    }
 
 ];
 
-export default { allOffers };
+export default allOffers;

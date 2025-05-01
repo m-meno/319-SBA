@@ -10,13 +10,13 @@ router.post('/', async (req, res) => {
     res.json(newUser);
 });
 
-//Read (all offers)
+//Read (all users)
 router.get('/', async (req, res) => {
     const allUsers = await User.find({});
     res.json(allUsers);
 });
 
-//Read (one offer)
+//Read (one user)
 router.get('/:id', async (req, res) => {
     const oneUser = await User.findById(req.params.id);
     res.json(oneUser);

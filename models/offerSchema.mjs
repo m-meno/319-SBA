@@ -14,12 +14,11 @@ const offerSchema = new mongoose.Schema({
     location: {
         type: String,
         required: true,
-        enum: ["LoDo", "Capital Hill", "Uptown", "Golden Triangle", "Five Points"],
+        enum: ["LoDo", "Capitol Hill", "Uptown", "Golden Triangle", "Five Points"],
         message: "{VALUE} is not a valid city."
     },
     datePosted: {
         type: Date,
-        required: true,
         default: Date.now
     }
 });

@@ -49,4 +49,4 @@ const allUsers = [
     }
 ];
 
-export default { allUsers };
+export default allUsers;

@@ -26,17 +26,21 @@ connectDB();
 //Routes
 app.use('/offers', offerRoutes);
 app.use('/requests', requestRoutes);
-app.use('/users', userRoutes)
+app.use('/users', userRoutes);
 
-// app.get('/seed', async (req, res)=> {
-//     await Offer.deleteMany({});
-//     await Offer.create(allOffers);
-//     await Request.deleteMany({});
-//     await Request.create(allRequests);
-//     await User.deleteMany({});
-//     await User.create(allUsers);  
-//     res.send('Database seeded.')
-// });
+// console.log("Offers:", allOffers.length);
+// console.log("Requests:", allRequests.length);
+// console.log("Users:", allUsers.length);
+
+app.get('/seed', async (req, res)=> {
+    await Offer.deleteMany({});
+    await Offer.create(allOffers);
+    await Request.deleteMany({});
+    await Request.create(allRequests);
+    await User.deleteMany({});
+    await User.create(allUsers);
+    res.send('Database seeded.');
+});
 
 //Error Handling Middleware
 app.use(globalError);

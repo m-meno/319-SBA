@@ -2,7 +2,7 @@ const allRequests = [
     {
         type: "Product",
         description: "In search of ceramic pots",
-        location: "Capital Hill"
+        location: "Capitol Hill"
     },
     {
         type: "Service",
@@ -27,7 +27,7 @@ const allRequests = [
     {
         type: "Product",
         description: "Seeking a small desk for a home office setup",
-        location: "Capital Hill"
+        location: "Capitol Hill"
     },
     {
         type: "Service",
@@ -36,4 +36,4 @@ const allRequests = [
     }
 ];
 
-export default { allRequests };
+export default allRequests;
