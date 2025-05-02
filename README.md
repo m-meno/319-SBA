@@ -16,4 +16,4 @@ POST | /offers | Post one offer |
 PUT | /offers/:id | Edit one offer |
 DELETE | /offers/:id | Delete one offer |
 
-For some reason I had a hard time with my seed route working correctly. 
+I had a hard time with my seed route working correctly. It was a good reminder to continuously test. In the future, I would plan out my routes a bit better. If I had more time I would make more routes and add more validation.
